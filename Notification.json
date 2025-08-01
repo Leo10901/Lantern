@@ -1,0 +1,46 @@
+{
+    "name": "Notification",
+    "type": "object",
+    "properties": {
+      "recipient_email": {
+        "type": "string",
+        "description": "Email of the user receiving the notification"
+      },
+      "sender_username": {
+        "type": "string",
+        "description": "Username of the user who triggered the notification"
+      },
+      "sender_avatar": {
+        "type": "string",
+        "description": "Avatar of the sender"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "friend_request",
+          "new_activity",
+          "new_story"
+        ],
+        "description": "Type of notification"
+      },
+      "message": {
+        "type": "string",
+        "description": "The notification message"
+      },
+      "is_read": {
+        "type": "boolean",
+        "default": false,
+        "description": "Whether the user has read the notification"
+      },
+      "related_id": {
+        "type": "string",
+        "description": "ID of the related item (e.g., friendship ID, activity ID)"
+      }
+    },
+    "required": [
+      "recipient_email",
+      "sender_username",
+      "type",
+      "message"
+    ]
+  }

@@ -1,0 +1,32 @@
+{
+    "name": "Story",
+    "type": "object",
+    "properties": {
+      "file_url": {
+        "type": "string",
+        "description": "URL of the image or video for the story"
+      },
+      "caption": {
+        "type": "string",
+        "description": "A short caption for the story"
+      },
+      "user_avatar": {
+        "type": "string",
+        "description": "Avatar of the user who posted the story"
+      },
+      "user_username": {
+        "type": "string",
+        "description": "Username of the user who posted the story"
+      },
+      "expires_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "When the story should automatically be deleted"
+      }
+    },
+    "required": [
+      "file_url",
+      "user_username",
+      "expires_at"
+    ]
+  }
